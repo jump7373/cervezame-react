@@ -1,11 +1,12 @@
 import React from "react";
+import CartWidget from './CartWidget';
 import {Navbar, Nav, NavDropdown, Container} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function NavBar (){
     return(
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
   <Container>
   <Navbar.Brand href="home">Inicio</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,9 +28,11 @@ export default function NavBar (){
       <Nav.Link eventKey={2} href="birrapedia">
         Birrapedia
       </Nav.Link>
+      <CartWidget />
     </Nav>
   </Navbar.Collapse>
   </Container>
+  
 </Navbar>
     )
 }
