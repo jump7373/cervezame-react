@@ -3,7 +3,7 @@ import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import ItemCount from './componentes/ItemCount';
+
 
 
 
@@ -12,7 +12,7 @@ function App() {
     
    <>
     <NavBar />
-    <ItemListContainer usuario={"Darío"}/>
+    <ItemListContainer/>
     
    </>
 

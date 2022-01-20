@@ -12,13 +12,15 @@ export default function ItemCount ({inicial, stock}) {
         
         if(cantidad < stock){
             setCantidad(cantidad + 1)
+        }else{
+            alert("No hay más unidades")
         }
         
     }
 
     function restar(){
 
-        if(cantidad > inicial ){
+        if(cantidad > inicial ) {
             setCantidad(cantidad - 1)
         }
     }
@@ -28,15 +30,15 @@ export default function ItemCount ({inicial, stock}) {
     }
 
     return (
-        <>
-        <Button variant="primary" onClick={() => restar()}>-</Button>
-        
-        <span>{cantidad}</span>            
+        <div>
+            <Button variant="primary" onClick={() => restar()}>-</Button>
+            
+            <span>{cantidad}</span>
 
-        <Button Variant="primary" onClick={() => sumar()}>+</Button> 
-        <br />
-        <br />
-        <Button Variant="primary" onClick={() => onAdd() }>Agregar al carrito</Button>
-        </>
+            <Button Variant="primary" onClick={() => sumar()}>+</Button> 
+            <br />
+            <br />
+            <Button Variant="primary" onClick={() => onAdd() }>Agregar al carrito</Button>
+        </div>
     )
 }
