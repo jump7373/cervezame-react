@@ -3,19 +3,17 @@ import { useEffect } from "react";
 import Item from "./Item";
 import ItemListContainer from "./ItemListContainer";
 
-export default function ItemList({items}) {
+export default function ItemList({products}) {
 
     return (
 
-        <div className="category">
+        <>
             
             {
-                items.map (item => {
-                    return <Item item={item} />
-                })
+                products.map (item => <Item item={item}/>)
             }
 
-        </div>
+        </>
 
     )
 }

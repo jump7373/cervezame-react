@@ -1,5 +1,8 @@
 import React from "react";
+import { BrowserRouter, Switch, Route, useParams, Link } from 'react-router-dom';
 import ItemCount from "./ItemCount";
+import {Button} from "react-bootstrap";
+
 import "./Item.css"
 
 
@@ -14,7 +17,8 @@ export default function Item ({item}) {
                 <h2>{item.nombre}</h2>
                 <p>Alcohol: {item.alcohol} || IBU: {item.ibu}</p>
                 <h3>${item.precio}</h3>
-                <ItemCount inicial= {1} stock={item.stock}/>
+                <ItemCount inicial= {1} stock={item.stock}/> <br />
+                <Link to={"/item/" + item.id}><Button variant="primary">Ver detalle</Button></Link>
             </div>
         </>
     )
