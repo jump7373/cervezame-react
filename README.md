@@ -1,3 +1,7 @@
+# Cervezame - Descripción de la app
+
+Cervezame es una tienda on-line de cervezas en el que se puede navegar por diferentes categorías y acceder al detalle de cada uno de los productos que se ofrecen.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
