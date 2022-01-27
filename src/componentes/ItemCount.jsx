@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import {Button} from "react-bootstrap";
 import './ItemCount.css';
-import ItemListContainer from "./ItemListContainer";
+
 
 export default function ItemCount ({inicial, stock}) {
 

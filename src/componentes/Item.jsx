@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ItemCount from "./ItemCount";
 import {Button} from "react-bootstrap";
 

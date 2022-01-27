@@ -25,7 +25,7 @@ export default function ItemDetailContainer (){
       
     useEffect(() =>{
 
-        const GetItem = new Promise ((resolve, reject) => {
+        const getItem = new Promise ((resolve, reject) => {
 
             setTimeout(() => {
                 let Producto = itemList.find((item) => item.id === itemId);
@@ -34,12 +34,12 @@ export default function ItemDetailContainer (){
             }, 1000)
         });
 
-        GetItem.then((res) => {
+        getItem.then((res) => {
             setProducts(res)
             setLoading(false)
         })
 
-        GetItem.catch((err) =>{
+        getItem.catch((err) =>{
             setProducts(err)
         })
 
