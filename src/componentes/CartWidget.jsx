@@ -5,7 +5,7 @@ export default function CartWidget(prop) {
     return (
         <>
             <div>
-                <img src={carrito} alt="Icono carrito de compras" className="carrito"/>
+                <img src={carrito} style={{backgroundColor: "white", width: "35px", margin: "5px"}} alt="Icono carrito de compras" className="carrito"/>
                 
             </div>
         </>

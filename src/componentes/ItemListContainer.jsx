@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from './Item';
 import ItemList from "./ItemList";
-import "./ItemListContainer.css"
+import "./Components.css"
 
 
 export default function ItemListContainer() {
@@ -32,7 +32,7 @@ export default function ItemListContainer() {
 
 
             resolve(itemList);
-        }, 2000)
+        }, 200)
     })
 
     useEffect(() => {
