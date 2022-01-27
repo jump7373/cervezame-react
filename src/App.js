@@ -6,9 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import ItemDetail from './componentes/ItemDetail';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
-import Category from './componentes/Category';
-
-
 
 
 function App() {

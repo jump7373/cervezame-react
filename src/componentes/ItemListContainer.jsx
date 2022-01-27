@@ -26,7 +26,7 @@ export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const cargaritemList = new Promise((resolve, reject) => {
+    const cargarItemList = new Promise((resolve, reject) => {
         setTimeout(() => {
 
 
@@ -37,7 +37,7 @@ export default function ItemListContainer() {
 
     useEffect(() => {
 
-        cargaritemList.then((res) => {
+        cargarItemList.then((res) => {
 
 
             if (itemMarca) res = res.filter(item => item.marca == itemMarca)
