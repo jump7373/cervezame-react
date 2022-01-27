@@ -7,33 +7,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function NavBar (){
     return(
-        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-  <Container>
-  <Link to={"/"}><Navbar.Brand>Inicio</Navbar.Brand></Link>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-        
-        <NavDropdown title="Cervezas" id="collasible-nav-dropdown">            
-            {/* <NavDropdown.Item>Lager</NavDropdown.Itemhref=>
-            <NavDropdown.Item>IPA</NavDropdown.Item>
-            <NavDropdown.Item>Pilsen</NavDropdown.Itemf=>
-            <NavDropdown.Item>Rojas</NavDropdown.Itemhref=>
-            <NavDropdown.Divider />
-            <NavDropdown.Item>Todas</NavDropdown.Itemhref=> */}
-        </NavDropdown>
-       <Link to={"/contacto"}><Nav.Link>Contacto</Nav.Link></Link>
-    </Nav>
-    <Nav>
-      <Nav.Link>Nosotros</Nav.Link>
-      <Nav.Link eventKey={2}>
-        Birrapedia
-      </Nav.Link>
-      <CartWidget />
-    </Nav>
-  </Navbar.Collapse>
-  </Container>
-  
-</Navbar>
+      <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+        <Link to="/"><img src="https://raw.githubusercontent.com/jump7373/proyecto-final-mirabile/master/img/logo-cervezame.png" style={{width: "7rem"}} alt="" /></Link>
+        <Nav className="me-auto">
+          <Nav.Link><Link exact to="/">Inicio</Link></Nav.Link>
+          <Nav.Link><Link exact to="/category/Ortuzar">Cervezas Ortuzar</Link></Nav.Link>
+          <Nav.Link><Link to="/category/Baba">Cervezas Baba</Link></Nav.Link>
+        </Nav>
+        </Container>
+      </Navbar>
+     
+    </>
     )
 }

@@ -31,14 +31,14 @@ export default function ItemCount ({inicial, stock}) {
 
     return (
         <div>
-            <Button variant="primary" onClick={() => restar()}>-</Button>
+            <Button variant="dark" onClick={() => restar()}>-</Button>
             
             <span>{cantidad}</span>
 
-            <Button Variant="primary" onClick={() => sumar()}>+</Button> 
+            <Button variant="dark" onClick={() => sumar()}>+</Button>
             <br />
             <br />
-            <Button Variant="primary" onClick={() => onAdd() }>Agregar al carrito</Button>
+            <Button variant="dark" onClick={() => onAdd() }>Agregar al carrito</Button>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import ItemDetail from './componentes/ItemDetail';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
+import Category from './componentes/Category';
 
 
 
@@ -22,16 +23,14 @@ function App() {
             <ItemListContainer />
           </Route>
 
+          <Route path="/category/:itemMarca">
+            <ItemListContainer/>
+          </Route>
+
           <Route path="/item/:itemId">
             <ItemDetailContainer />
           </Route>
-
-          <Route path="/contacto">
-            Formulario de contacto
-          </Route>
-
-
-
+          
         </Switch>
       </BrowserRouter>
     </>

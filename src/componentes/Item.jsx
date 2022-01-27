@@ -18,7 +18,7 @@ export default function Item ({item}) {
                 <p>Alcohol: {item.alcohol} || IBU: {item.ibu}</p>
                 <h3>${item.precio}</h3>
                 <ItemCount inicial= {1} stock={item.stock}/> <br />
-                <Link to={"/item/" + item.id}><Button variant="primary">Ver detalle</Button></Link>
+                <Link to={"/item/" + item.id}><Button variant="dark">Ver detalle</Button></Link>
             </div>
         </>
     )
