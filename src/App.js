@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import ItemDetail from './componentes/ItemDetail';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
+import Cart from './componentes/Cart';
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
 
           <Route path="/item/:itemId">
             <ItemDetailContainer />
+          </Route>
+          
+          <Route exact path="/cart" element={<Cart/>}>
+            <Cart />
           </Route>
           
         </Switch>

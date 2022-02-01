@@ -3,4 +3,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 25px;
+    background-color: #000;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    
+}
+
+.category__container img {
+    width: 12rem;
+    margin-top: 0.3rem;
+}
+.category__container h2 {
+    font-size: 1.8rem;
+}
+
+.category {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.detail__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.detail__container img {
+    width: 40%;
+}
+
+.detail__container > div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonCount {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }

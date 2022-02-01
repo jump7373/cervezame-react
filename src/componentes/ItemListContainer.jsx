@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState  } from "react";
 import { useParams } from "react-router-dom";
-import Item from './Item';
 import ItemList from "./ItemList";
 import "./Components.css"
+import "./Item.css"
 
 
 export default function ItemListContainer() {
@@ -28,8 +28,6 @@ export default function ItemListContainer() {
     const cargarItemList = new Promise((resolve, reject) => {
         setTimeout(() => {
 
-
-
             resolve(itemList);
         }, 200)
     })
@@ -39,12 +37,14 @@ export default function ItemListContainer() {
         cargarItemList.then((res) => {
 
 
-            if (itemMarca) res = res.filter(item => item.marca == itemMarca)
+            if (itemMarca) res = res.filter(item => item.marca === itemMarca)
 
             setProducts(res)
             setLoading(false)
 
         })
+
+        cargarItemList.catch((err) => console.log(err))
     }, [itemMarca])
 
     return (
