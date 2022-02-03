@@ -24,10 +24,7 @@ export default function ItemCount({ inicial, stock, onAdd }) {
         }
     }
 
-    // function onAdd(){
-    //     alert ("Usted compro " + cantidad )
-    // }
-
+  
     return (
         <div>
             <div className="buttonCount">
