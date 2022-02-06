@@ -4,16 +4,18 @@ import { cartContext } from "../context/CartContext";
 
 export default function CartItem({producto}) {
 
-    const {deleteProduct} = useContext(cartContext)
+    const {deleteProduct, calcularTotal} = useContext(cartContext)
 
     return (
         <>
 
             <div>
                 <img src={producto.item.img} alt="" />
-                <p>{producto.item.nombre}</p>
-                <p>{producto.cantidad}</p>
-                <p>Precio por unidad: ${producto.item.precio}</p>
+                <p>Producto: {producto.item.nombre}</p>
+                <p>Cantidad: {producto.cantidad}</p>
+                <p>Precio unitario: ${producto.item.precio}</p>
+                <p>Subtotal: ${producto.cantidad * producto.item.precio}</p>
+                
                 <Button onClick={() => deleteProduct(producto.item.id)} variant="dark">Eliminar producto</Button>
             </div>
 

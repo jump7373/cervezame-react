@@ -11,12 +11,12 @@ export default function CartContext({children}){
             const indexItem = cart.findIndex(element => element.item.id === producto.id);
             cart[indexItem].cantidad = cart[indexItem].cantidad + cantidad;
             setCart([...cart]);
-            
 
         } else {
             setCart([...cart, {item: producto, cantidad}])
+
         }
-        
+
     })
 
     const deleteProduct = ((id) => {
@@ -24,17 +24,25 @@ export default function CartContext({children}){
         setCart(fullCart)
     })
 
-    const deleteCart = (() =>{
-        setCart([]);
-    });
-
+    
     const isInCart = (id) => {
         return cart.some(element => element.item.id === id)
 
     }
 
+    const calcularTotal = (() => {
+        
+        return cart.reduce((a, b) => a + (b.item.precio * b.cantidad), 0)
+    })
+
+    const deleteCart = () =>{
+        setCart([]);
+        
+    };
+
+
     return(
-        <cartContext.Provider value={{cart, addCart, deleteProduct, deleteCart}}>
+        <cartContext.Provider value={{cart, addCart, deleteProduct, deleteCart, calcularTotal}}>
             {children}
         </cartContext.Provider>
     )

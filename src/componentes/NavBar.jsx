@@ -1,7 +1,7 @@
 import React from "react";
 import CartWidget from './CartWidget';
-import {Navbar, Nav, NavDropdown, Container} from "react-bootstrap";
-import {BrowserRouter, Switch, Route, useParams, Link} from "react-router-dom"
+import {Navbar, Nav, Container} from "react-bootstrap";
+import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Components.css"
 

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import "./Components.css"
 import "./Item.css"
+import Loader from "./Loader";
 
 
 export default function ItemListContainer() {
@@ -29,7 +30,7 @@ export default function ItemListContainer() {
         setTimeout(() => {
 
             resolve(itemList);
-        }, 200)
+        }, 20)
     })
 
     useEffect(() => {
@@ -52,7 +53,7 @@ export default function ItemListContainer() {
             {
                 (loading)
                     ?
-                    <p>Cargando</p>
+                    <Loader/>
                     :
                     <div className="category">
                         <ItemList products={products} />

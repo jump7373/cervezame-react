@@ -3,6 +3,7 @@ import { isAccordionItemSelected } from "react-bootstrap/esm/AccordionContext";
 import {BrowserRouter, Switch, Route, useParams, Link} from "react-router-dom"
 import ItemDetail from "./ItemDetail";
 import ItemList from "./ItemList";
+import Loader from "./Loader";
 
 let itemList = [
     {id: "1001", marca: "Ortuzar", nombre: "CERVEZA POKER", stock: 6, precio: 280, alcohol: "5.8%", ibu:"51", descripcion:"Cerveza de color ámbar profundo acompañado por una espuma densa de gran retención. Cuerpo medio alto. Sabor a maltas caramelo y fuerte carácter a alcohol y amargor acompañados por un sutil ahumado. El agregado de bourbon Jack Daniels en madurado da notas a madera y vainilla hacia el final.", img:"https://cervezaortuzar.com.ar/wp-content/uploads/poker-1.jpg"}, 
@@ -31,7 +32,7 @@ export default function ItemDetailContainer (){
                 let Producto = itemList.find((item) => item.id === itemId);
                 
                 resolve (Producto)
-            }, 1000)
+            }, 10)
         });
 
         getItem.then((res) => {
@@ -50,7 +51,7 @@ export default function ItemDetailContainer (){
     return(
         <>
             {
-                (loading) ? <p>Cargando</p> : <ItemDetail products={products}/>
+                (loading) ? <Loader /> : <ItemDetail products={products}/>
             }
            
         </>
