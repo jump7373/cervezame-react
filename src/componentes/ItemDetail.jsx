@@ -38,7 +38,7 @@ export default function ItemDetail({ products }) {
                                 <p>Agregó {quantity} {products.nombre} al carrito </p>
 
                                 <Link to={"/cart"}>
-                                    <Button variant="dark">Ir al carrito</Button>                                    
+                                    <Button variant="dark">Termina la compra</Button>                                    
                                 </Link> <br/>
                                 <Link to="/">
                                     <Button variant="dark">Seguir comprando</Button>

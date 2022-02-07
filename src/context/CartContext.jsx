@@ -31,8 +31,13 @@ export default function CartContext({children}){
     }
 
     const calcularTotal = (() => {
-        
+
+        // return cart.map(item => item.item.precio * item.cantidad).reduce((a, b) => a + b)
         return cart.reduce((a, b) => a + (b.item.precio * b.cantidad), 0)
+    })
+
+    const calcularCantidad = (() => {
+        return cart.reduce((a, b) => a + b.cantidad, 0) 
     })
 
     const deleteCart = () =>{
@@ -42,7 +47,7 @@ export default function CartContext({children}){
 
 
     return(
-        <cartContext.Provider value={{cart, addCart, deleteProduct, deleteCart, calcularTotal}}>
+        <cartContext.Provider value={{cart, addCart, deleteProduct, deleteCart, calcularTotal, calcularCantidad}}>
             {children}
         </cartContext.Provider>
     )
