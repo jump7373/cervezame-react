@@ -4,6 +4,8 @@ export const cartContext = createContext()
 
 export default function CartContext({children}){
 
+    
+
     const [cart, setCart] = useState([])
 
     const addCart = ((producto, cantidad) => {
