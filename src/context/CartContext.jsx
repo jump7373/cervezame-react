@@ -34,7 +34,6 @@ export default function CartContext({children}){
 
     const calcularTotal = (() => {
 
-        // return cart.map(item => item.item.precio * item.cantidad).reduce((a, b) => a + b)
         return cart.reduce((a, b) => a + (b.item.precio * b.cantidad), 0)
     })
 

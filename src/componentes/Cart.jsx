@@ -11,9 +11,9 @@ export default function Cart() {
     const { cart, deleteCart, calcularTotal } = useContext(cartContext)
 
     const [totalCompra, setTotalCompra] = useState(0)
-    
 
-    useEffect(() =>{
+
+    useEffect(() => {
         setTotalCompra(calcularTotal());
 
     }, [cart])
@@ -36,6 +36,10 @@ export default function Cart() {
                     </div>
                     <Button onClick={() => deleteCart()} variant="dark">Vaciar Carrito</Button>
                     <h1>Total de la Compra: {totalCompra}</h1>
+
+                    <Link to={"/formulario-de-compra"}>
+                        <Button variant="dark">Termina la compra</Button>
+                    </Link> <br />
                 </div>
 
 

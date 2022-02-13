@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
 import CartContext from './context/CartContext';
+import Form from './componentes/Form';
+
 
 
 function App() {
@@ -31,6 +33,10 @@ function App() {
 
             <Route exact path="/cart">
               <Cart />
+            </Route>
+
+            <Route exact path="/formulario-de-compra">
+              <Form />
             </Route>
 
           </Switch>
