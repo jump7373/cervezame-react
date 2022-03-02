@@ -441,7 +441,7 @@ input {
   display: flex;
 }
 
-.nosotros {
+.nosotros, .carritoVacio {
   width: 100vw;
   height: 100vh;  
   background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-mirabile-react.appspot.com/o/background-home.jpg?alt=media&token=5852a13f-2004-4b6d-a896-daaf1ef2a992");
@@ -453,7 +453,7 @@ input {
   
 }
 
-.nosotrosContainer {
+.nosotrosContainer, .carritoVacioContainer {
   text-align: center;
   width: 60%;
   height: 500px;
@@ -462,6 +462,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 50px;
 }
 
@@ -471,7 +472,7 @@ input {
   font-weight: 600;
 }
 
-.nosotrosContainer p{
+.nosotrosContainer p, .carritoVacioContainer p{
   color: white;
   font-size: 1.5rem;
 }

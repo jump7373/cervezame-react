@@ -23,10 +23,12 @@ export default function Cart() {
         <>
 
             {cart.length === 0 ?
-                <div>
+                <div className="carritoVacio">
+                    <div className="carritoVacioContainer">
                     <p>Su carrito está vacío</p>
                     <button className="button"><Link to='/' style={{ textDecoration: "none", color: "white" }}>Ir a comprar</Link></button>
 
+                </div>
                 </div>
                 :
                 <div>
