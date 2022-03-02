@@ -23,5 +23,8 @@ Realizando una compra
 Finalizando compra
 ![Demostration](https://media.giphy.com/media/NJS3lfImyLTcgiLHnQ/giphy.gif)
 
+Aquí se puede ver el deploy
+https://competent-meninsky-de8460.netlify.app/
+
 App creada por Juan Pablo Mirabile
 
