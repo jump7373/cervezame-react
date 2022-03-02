@@ -28,7 +28,8 @@ export default function Form() {
         setCompraTerminada(false)
     }
 
-    function finalizarCompra() {
+    function finalizarCompra(event) {
+        event.preventDefault()
 
         const db = getFirestore();
         const ordenesDeCompra = db.collection("ordenes")
@@ -63,25 +64,30 @@ export default function Form() {
 
         <>
             {compraTerminada ?
-                <form action="">
+                <div className="form">
+                    <form action="" onSubmit={finalizarCompra}>
                     <h4>Ingrese sus datos</h4>
 
-                    <input type="text" name="nombre" ref={nombreRef} placeholder="Ingrese su nombre y apellido" />
+                    <input type="text" name="nombre" ref={nombreRef} placeholder="Ingrese su nombre y apellido" required autoFocus/>
                     <br /><br />
-                    <input type="text" name="direccion" ref={direccionRef} placeholder="Ingrese su domicilio" />
+                    <input type="text" name="direccion" ref={direccionRef} placeholder="Ingrese su domicilio" required/>
                     <br /><br />
-                    <input type="text" name="localidad" ref={localidadRef} placeholder="Ingrese su localidad" />
+                    <input type="text" name="localidad" ref={localidadRef} placeholder="Ingrese su localidad" required/>
                     <br /><br />
-                    <input type="email" name="direccion de email" ref={emailRef} placeholder="Ingrese su email" />
+                    <input type="email" name="direccion de email" ref={emailRef} placeholder="Ingrese su email" required/>
                     <br /><br />
-                    <input type="tel" name="número de teléfono" ref={telefonoRef} placeholder="Ingrese su número de teléfono" />
+                    <input type="number" name="número de teléfono" ref={telefonoRef} placeholder="Ingrese su número de teléfono" minLength="10" required/>
                     <br /><br />
-                    <Button onClick={() => finalizarCompra()}>Enviar</Button>
+                    <button className="button" type="submit">Enviar</button>
+                    
                 </form>
+                </div>
                 :
-                <div>
-                    <h2>Gracias por su compra, su código de compra es: </h2>
-                    <p style={{color: "red", fontSize: "35px"}}>{ordenId}</p>
+                <div className="form">
+                    <div className="formFinal">
+                    <h2 style={{color: "white", fontSize: "35px"}}>Gracias por su compra, su código de compra es: </h2>
+                    <p style={{color: "white", fontSize: "35px"}}>{ordenId}</p>
+                    </div>
                 </div>
             }
 

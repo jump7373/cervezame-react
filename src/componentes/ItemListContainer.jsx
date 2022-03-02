@@ -1,11 +1,10 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState, useParams } from "react";
 import ItemList from "./ItemList";
 import "./Components.css"
 import "./Item.css"
-import Loader from "./Loader";
 import { getFirestore } from "../firebase/firebase";
+import NavBar from "./NavBar";
+import Loader from "./Loader/Loader";
 
 
 export default function ItemListContainer() {
@@ -14,47 +13,47 @@ export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    
+
     useEffect(() => {
-
         const db = getFirestore()
+        const itemCollection = (itemMarca ? db.collection("productos").where("marca", "==", itemMarca) : db.collection("productos"))
+        
+        itemCollection.get()
+        .then((querySnapShot) => {
+            if (querySnapShot.size === 0) {
+                console.log("No hay productos en el query");
+                return
+            }
 
-        if (itemMarca) {
+            setProducts(querySnapShot.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() }
+            }))
+            setLoading(false)
+        })
 
-            db.collection("productos").where("marca", "==", itemMarca).get()
-                .then((querySnapShot) => {
-                    if (querySnapShot.size === 0) {
-                        console.log("No hay productos en el query");
-                        return
-                    }
-
-                    setProducts(querySnapShot.docs.map((doc) => {
-                        return { id: doc.id, ...doc.data() }
-                    }))
-                    setLoading(false)
-                })
-
-        } else {
-
-            db.collection("productos").get()
-                .then((querySnapShot) => {
-                    if (querySnapShot.size === 0) {
-                        console.log("No hay productos en el query");
-                        return
-                    }
-
-
-                    setProducts(querySnapShot.docs.map((doc) => {
-                        return { id: doc.id, ...doc.data() }
-                    }))
-                    setLoading(false)
-                })
-
-                .catch((err) => {
-                    console.log(err)
-                })
-        }
     }, [itemMarca])
+    
+
+    useEffect(() => {
+        const db = getFirestore()
+        const itemCollection = (itemMarca ? db.collection("productos").where("pais", "==", itemMarca) : db.collection("productos"))
+        
+        itemCollection.get()
+        .then((querySnapShot) => {
+            if (querySnapShot.size === 0) {
+                console.log("No hay productos en el query");
+                return
+            }
+
+            setProducts(querySnapShot.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() }
+            }))
+            setLoading(false)
+        })
+
+    }, [itemMarca])
+
+   
 
 
     return (
@@ -66,6 +65,7 @@ export default function ItemListContainer() {
                     :
                     <div className="category">
                         <ItemList products={products} />
+                        
                     </div>
             }
 

@@ -1,29 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+.navBarCategorias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.categoriaNavBar p{
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  color: #c49107;
+}
+
+.navBar {
+  background: rgb(0, 0, 0, 0.9);
+}
+
+.navBarCat {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navBarCat:hover {
+  color: white;
+}
+
+#basic-nav-dropdown{
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+
+.cart {
+  font-size: 50px;
+  color: #f0f0f0;
+}
+
+.cartCantidad {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c49107;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  left: -10px;
+}
+
+.cartContainer {
+  display: flex;
+  position: relative;
+  left: 40vmax ;
+}
 img {
-    width: 300px;
-    height: auto;
+  width: 300px;
+  height: auto;
 }
 
 .category {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .links {
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-family:Arial, Helvetica, sans-serif ;
-    font-weight: 600;
-    font-size: 20px;
-    border: 1px white solid;
-    border-radius: 10px;
-    padding: 10px;
-    
+  color: black;
+  text-decoration: none;
 }
 
 .links:hover {
-    color: black;
-    background-color: white;
+  color: none;
+}
+
+.footer {
+  background: rgb(0, 0, 0, 0.9);
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  z-index: 22;
+  text-decoration: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+.facebook:hover {
+  color: #0c056e;
+  
+}
+
+.twitter:hover {
+  color: #00acee;
+}
+
+.instagram:hover {
+  color: #dd2a7b;
+}
+
+.mail:hover {
+  color: black;
+}
+
+.whatsapp:hover{
+  color: #00bb2d
+}
+.footer ul {
+  list-style: none;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.socialNetworks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  font-size: 70px;
+}
+
+.homeContainer {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-mirabile-react.appspot.com/o/background-home.jpg?alt=media&token=5852a13f-2004-4b6d-a896-daaf1ef2a992");
+  background-size: cover;
+}
+
+.homeContainerBG {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgb(35, 35, 42, 0.6);
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+}
+
+.homeContainer img {
+  width: 90vh;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.homeContainer h1 {
+  color: #c49107;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.homeContainer h2 {
+  color: #fefefe;
+  font-size: 30px;
+  font-weight: 300;
+  width: 50%;
+}
+
+.homePromotion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  width: auto;
+}
+
+.button {
+  border: none;
+  background-color: #c49107;
+  color: white;
+  text-transform: uppercase;
+  width: 170px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px;
+  
+}
+
+.buttonAdd {
+    border: none;
+  background-color: #c49107;
+  color: white;
+  text-transform: uppercase;
+  width: 30px;
+  height: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.counter {
+    width: 60px;
+    
+    text-align: center;
+    border: 1px solid #c49107;
+    font-size: 20px;
+}
+
+.categoryPromotion {
+    
+  width: 100vw;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.categoryPromotion__Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  width: 18vw;
+  
+}
+
+.categoryPromotion__Item img {
+  height: 20rem;
+  width: auto;
+  margin-top: 0.3rem;
+}
+
+.category__container h1 {
+  font-size: 20rem;
+}
+
+.precioDetail {
+    color: rgb(101, 103, 104);
+    font-size: 3rem;
+}
+
+.marcaDetail {
+  font-size: 2rem;
+}
+
+.marcaItem {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #c49107;
+  color: white;
+}
+
+.category__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px black solid;
+    background-color: #000;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    
+}
+
+
+
+.category__container img {
+    height: 40vh;
+    width: auto;    
+    margin-top: 0.3rem;
+}
+
+
+.category {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    margin: 0 30px;
+}
+
+.detail__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail__container img {
+    height: 30vw;
+    width: auto;
+}
+
+.detail__container > div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonCount {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.condicionesDeCompra {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-mirabile-react.appspot.com/o/background-home.jpg?alt=media&token=5852a13f-2004-4b6d-a896-daaf1ef2a992");
+  background-size: cover;
+  height: 30vh;
+}
+
+.condicionesDeCompra > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: rgb(0, 0, 0, 0.4);
+  width: 100%;
+  border-top: #c49107 4px solid;
+  border-bottom: #c49107 4px solid;
+  margin-bottom: 20px;
+  height: 30vh;
+}
+
+.condicionesDeCompraItem {
+  margin: 0 15px;
+  width: 20%;
+  color: white;
+  
+}
+
+.condicionesDeCompra h5 {
+  font-size: 1.5rem;
+  text-decoration: black;
+}
+
+.productoAgregado {
+  text-transform: uppercase;
+  color: white;
+  box-sizing: content-box;
+  border: 1px solid green;
+  background-color: green;
+  text-align: center;
+}
+
+button[disabled]{
+  background-color: grey;
+}
+
+.cart-item {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px;
+}
+
+.cart-item img {
+  height: 150px;
+  width: auto;
+}
+
+.categoryCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalCompra {
+  text-align: right;
+  margin-right: 10%;
+}
+
+.cartButton {
+  width: 100%;
+}
+
+.buttonFinalizar {
+
+  position: relative;
+  left: 80%;
+}
+
+form, .formFinal {
+  width: 75%;
+  height: 70vh;
+  margin: 40px auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-mirabile-react.appspot.com/o/background-home.jpg?alt=media&token=5852a13f-2004-4b6d-a896-daaf1ef2a992");
+  background-size:cover;
+  height: 100vh;
+  display: flex;
+  margin: 20px 0;
+  
+}
+
+input {
+  width: 50%;
+  height: 90px;
+  border: #c49107;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.brandFooter {
+  width: 25vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nosotros {
+  width: 100vw;
+  height: 100vh;  
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/proyecto-mirabile-react.appspot.com/o/background-home.jpg?alt=media&token=5852a13f-2004-4b6d-a896-daaf1ef2a992");
+  background-size:cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.nosotrosContainer {
+  text-align: center;
+  width: 60%;
+  height: 500px;
+  margin: auto;
+  background: rgb(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.nosotrosContainer h1 {
+  color: #c49107;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.nosotrosContainer p{
+  color: white;
+  font-size: 1.5rem;
 }

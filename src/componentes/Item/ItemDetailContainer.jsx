@@ -3,8 +3,8 @@ import { isAccordionItemSelected } from "react-bootstrap/esm/AccordionContext";
 import {BrowserRouter, Switch, Route, useParams, Link} from "react-router-dom"
 import ItemDetail from "./ItemDetail";
 import ItemList from "./ItemList";
-import Loader from "./Loader/Loader";
-import {getFirestore} from "../firebase/firebase"
+import Loader from "../Loader/Loader";
+import {getFirestore} from "../../firebase/firebase"
 
 export default function ItemDetailContainer (){
 

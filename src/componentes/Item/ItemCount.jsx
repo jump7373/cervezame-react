@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-
 
 
 export default function ItemCount({ inicial, stock, onAdd }) {
 
     const [cantidad, setCantidad] = useState(inicial);
+    
 
     function sumar() {
 
         if (cantidad < stock) {
             setCantidad(cantidad + 1)
-        } else {
-            alert("No hay más unidades")
-        }
-
+        } 
     }
 
     function restar() {
@@ -28,15 +24,15 @@ export default function ItemCount({ inicial, stock, onAdd }) {
     return (
         <div>
             <div className="buttonCount">
-                <Button variant="dark" onClick={() => restar()}>-</Button>
+                <button className="buttonAdd" onClick={() => restar()}>-</button>
 
-                <span>{cantidad}</span>
+                <span className="counter">{cantidad}</span>
 
-                <Button variant="dark" onClick={() => sumar()}>+</Button>
+                <button className="buttonAdd" disabled={cantidad >= stock} onClick={() => sumar()}>+</button>
             </div>
             <br />
             <br />
-            <Button variant="dark" onClick={() => onAdd(cantidad)}>Agregar al carrito</Button>
+            <button className="button" onClick={() => onAdd(cantidad)}>Agregar al carrito</button>
         </div>
     )
 }
