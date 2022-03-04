@@ -78,7 +78,7 @@ export default function Form() {
                     <br /><br />
                     <input type="number" name="número de teléfono" ref={telefonoRef} placeholder="Ingrese su número de teléfono" minLength="10" required/>
                     <br /><br />
-                    <button className="button" type="submit">Enviar</button>
+                    <button className="button" type="submit" onClick={() => deleteCart()}>Enviar</button>
                     
                 </form>
                 </div>
